@@ -7,6 +7,7 @@ import './App.css'
 
 //components imports
 import AppNavbar from './components/AppNavbar'
+import Courses from './pages/Courses'
 import Home from './pages/Home'
 // to be executed at homepage
 /*import Banner from './components/Banner'
@@ -24,6 +25,7 @@ function App() {
       <AppNavbar />
       <Container>
         <Home />
+        <Courses />
       </Container>
     </>
 
