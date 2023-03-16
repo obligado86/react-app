@@ -17,8 +17,8 @@ export default function CourseCard() {
 			         			<strong>Price</strong><br/>
 			         			Php:40,000
 			        		</Card.Text>
+			        		<Button variant="primary">Enroll</Button>
 			      	</Card.Body>
-			      	<Button variant="primary" className="col-2 mb-3 mx-3">Enroll</Button>
 				</Card>
 			</Col>
 		</Row>
