@@ -7,8 +7,10 @@ import './App.css'
 
 //components imports
 import AppNavbar from './components/AppNavbar'
-import Courses from './pages/Courses'
-import Home from './pages/Home'
+//import Courses from './pages/Courses'
+//import Home from './pages/Home'
+//import Register from './pages/Register'
+import Login from './pages/Login'
 // to be executed at homepage
 /*import Banner from './components/Banner'
 import Highlights from './components/Highlights'*/
@@ -24,8 +26,10 @@ function App() {
     <>
       <AppNavbar />
       <Container>
+        <Login />
+        {/*<Register />
         <Home />
-        <Courses />
+        <Courses />*/}
       </Container>
     </>
 

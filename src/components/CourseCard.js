@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 import PropTypes from 'prop-types';
 
@@ -15,19 +15,25 @@ export default function CourseCard({ course }) {
 	const [count, setCount] = useState(0);
 	// Using the state hook returns an array with the first element being a value and the second element as a function that's used to change the value of the first element
 	//console.log(useState(0));
-	const [seats, setSeat] = useState(30);
+	const [seats, setSeats] = useState(30);
 
 	function enroll(){
 		setCount(count + 1);
-		setSeat(seats -1)
+		setSeats(seats -1)
 		console.log(`Enrollees: ${count}`);
 		console.log(`Seats: ${seats}`);
 		if(!seats){
 			setCount(count)
-			setSeat(seats)
+			setSeats(seats)
 			alert("No more seats")
 		}
 	}
+
+	useEffect(() => {
+		if(seats === 0){
+			setSeats(false)
+		}
+	}, [seats])
 
 
     return (
@@ -38,6 +44,8 @@ export default function CourseCard({ course }) {
                 <Card.Text>{course.description}</Card.Text>
                 <Card.Subtitle>Price:</Card.Subtitle>
                 <Card.Text>{course.price}</Card.Text>
+                <Card.Subtitle>Seats</Card.Subtitle>
+                <Card.Text>{seats}</Card.Text>
                 <Card.Subtitle>Enrollees</Card.Subtitle>
                 <Card.Text>{count}</Card.Text>
                 <Button variant="primary" onClick={enroll}>Enroll</Button>
