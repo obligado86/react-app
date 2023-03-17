@@ -11,6 +11,8 @@ export default function Login(){
 
 	function loginUser(e){
 		e.preventDefault();
+		localStorage.setItem('email', email)
+
 		setEmail('');
 		setPassword('');
 		alert('You are now logged in')
